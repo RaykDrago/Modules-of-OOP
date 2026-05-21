@@ -17,6 +17,7 @@ public class PageController {
                 "Приоритизация задач",
                 "Контакты поддержки"
         ));
+        model.addAttribute("thebestyoutubers", "База лучших ютуберов и данных");
         return "index";
     }
 
@@ -34,6 +35,27 @@ public class PageController {
         model.addAttribute("supportEmail", "support@helpdesk.local");
         model.addAttribute("workTime", "Пн-Пт, 09:00-18:00");
         model.addAttribute("phone", "+7 (000) 000-00-00");
+        model.addAttribute("miniTitle1", "Что указать в обращении");
+        model.addAttribute("miniTitle2", "Список каналов поддержки");
+        model.addAttribute("helpchannels", List.of(
+                "Дополнительный телефон горячей линии: +7 (228) 133-71-33",
+                "Вторая почта поддержки: krytoipacan2009@mail.ru",
+                "Помощник во ВКонтакте: (ссылка на ВКонтакте)",
+                "Помощник в Max: (ссылка на Max)"
+        ));
         return "contacts";
+    }
+
+    @GetMapping("/faq")
+    public String faq(Model model) {
+        model.addAttribute("pageTitle", "Список лучших ютуберов");
+        model.addAttribute("miniTitle", "Часто задаваемые вопросы");
+        model.addAttribute("theoftenQuestions", List.of(
+                "Первый вопрос: Как дела?",
+                "Второй вопрос: Что делаешь?",
+                "Третий вопрос: Скинь домашку Ваня пж",
+                "Четвертый вопрос: Это кто-то читает(?"
+        ));
+        return "faq";
     }
 }
