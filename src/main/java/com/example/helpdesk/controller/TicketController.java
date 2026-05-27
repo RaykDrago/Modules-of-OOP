@@ -29,4 +29,12 @@ public class TicketController {
         return "tickets";
     }
 
+    //доп задание для 3 модуля
+    @GetMapping("/tickets/customer")
+    public String customerTickets(Model model) {
+        model.addAttribute("tickets",
+                ticketRepository.findByCustomerNameContainingIgnoreCase("Иван"));
+        return "tickets";
+    }
+
 }

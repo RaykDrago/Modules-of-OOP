@@ -51,18 +51,33 @@
             </div>
         </div>
 
-        <a th:href="@{/faq}" class="text-decoration-none card-link">
+        <!-- Кнопка для перехода на страницу "База данных и ютуберов" - модуль 2 -->
         <div class="col-md-4">
-            <div class="card h-100 shadow-sm card-hover-effect">
-                <div class="card-body">
-                    <h2 class="h5" th:text="${thebestyoutubers}">База лучших ютуберов и данных</h2>
-                    <p class="card-text text-muted">
-                        Хотите что-то посмотреть, но не знаете что? Тогда вам срочно нужно посмотреть список наших спонсоров!
-                    </p>
+            <a th:href="@{/faq}" class="text-decoration-none card-link">
+                <div class="card h-100 shadow-sm card-hover-effect">
+                    <div class="card-body">
+                        <h2 class="h5" th:text="${thebestyoutubers}">База лучших ютуберов и данных</h2>
+                        <p class="card-text text-muted">
+                            Хотите что-то посмотреть, но не знаете что? Тогда вам срочно нужно посмотреть список наших спонсоров! ну и вопросики
+                        </p>
+                    </div>
                 </div>
-            </div>
+            </a>
         </div>
-        </a>
+
+        <!-- Кнопка для перехода на страницу "Заявки" - модуль 3 -->
+        <div class="col-md-4">
+            <a href="/tickets" class="text-decoration-none card-link">
+                <div class="card h-100 shadow-sm card-hover-effect">
+                    <div class="card-body">
+                        <h2 class="h5" th:text="${applications}">Заявки</h2>
+                        <p class="card-text text-muted">
+                            Переход на страницу просмотра заявок.
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
     </section>
 </main>
 

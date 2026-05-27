@@ -18,6 +18,7 @@ public class PageController {
                 "Контакты поддержки"
         ));
         model.addAttribute("thebestyoutubers", "База лучших ютуберов и данных");
+        model.addAttribute("applications", "Заявки");
         return "index";
     }
 
