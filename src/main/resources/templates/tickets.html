@@ -30,8 +30,11 @@
             <h1 class="mb-1">Список заявок</h1>
             <p class="text-muted mb-0">Данные загружаются из H2 Database.</p>
         </div>
-        <span class="badge text-bg-secondary"
-              th:text="${#lists.size(tickets)} + ' заявок'">4 заявки</span>
+        <div class="d-flex gap-2">
+            <span class="badge text-bg-secondary"
+                  th:text="${#lists.size(tickets)} + ' заявок'">4 заявки</span>
+            <a th:href="@{/tickets/new}" class="btn btn-primary">Создать заявку</a>
+        </div>
     </div>
 
     <div class="card shadow-sm">
@@ -58,10 +61,15 @@
                         </td>
                         <td th:text="${ticket.customerName}">Иван Иванов</td>
                         <td>
-<span class="badge text-bg-secondary"
-      th:text="${ticket.status}">NEW</span>
+                            <span class="badge text-bg-secondary"
+                                  th:text="${ticket.status}">NEW</span>
                         </td>
-                        <td th:text="${ticket.createdAt}">2026-05-14T09:00</td>
+                        <td th:text="${ticket.createdAt}">2026-05-28T10:30</td>
+                    </tr>
+                    <tr th:if="${#lists.isEmpty(tickets)}">
+                        <td colspan="5" class="text-center text-muted py-4">
+                            Пока нет ни одной заявки
+                        </td>
                     </tr>
                     </tbody>
                 </table>
