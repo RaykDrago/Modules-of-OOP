@@ -22,6 +22,7 @@
             <a class="nav-link" th:href="@{/contacts}">Контакты</a>
             <a class="nav-link" th:href="@{/faq}">База ютуберов и данных</a>
             <a class="nav-link" th:href="@{/tickets}">Заявки</a>
+            <a class="nav-link" th:href="@{/tickets/new}">Создание заявки</a>
         </div>
     </div>
 </nav>
@@ -73,6 +74,20 @@
                         <h2 class="h5" th:text="${applications}">Заявки</h2>
                         <p class="card-text text-muted">
                             Переход на страницу просмотра заявок.
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Кнопка-карточка для перехода на страницу создания заявок - модуль 4 -->
+        <div class="col-md-4">
+            <a href="/tickets/new" class="text-decoration-none card-link">
+                <div class="card h-100 shadow-sm card-hover-effect">
+                    <div class="card-body">
+                        <h2 class="h5" th:text="${create_applications}">Создание заявки</h2>
+                        <p class="card-text text-muted">
+                            Быстрое создание заявок!
                         </p>
                     </div>
                 </div>

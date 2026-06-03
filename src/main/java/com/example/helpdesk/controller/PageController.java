@@ -19,6 +19,7 @@ public class PageController {
         ));
         model.addAttribute("thebestyoutubers", "База лучших ютуберов и данных");
         model.addAttribute("applications", "Заявки");
+        model.addAttribute("create_applications", "Создание заявки");
         return "index";
     }
 
