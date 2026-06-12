@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Нет доступа | Help Desk</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body class="bg-light">
+
+<!-- Навигация -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+        <a class="navbar-brand fw-bold" th:href="@{/}">
+            <img th:src="@{/images/logo.jpg}" style="width: 5vw; height: auto;" class="me-2"/>
+            Help Desk
+        </a>
+        <div class="navbar-nav">
+            <a class="nav-link" th:href="@{/}">Главная</a>
+            <a class="nav-link" th:href="@{/about}">О нас</a>
+            <a class="nav-link" th:href="@{/contacts}">Контакты</a>
+            <a class="nav-link" th:href="@{/faq}">База ютуберов и данных</a>
+            <a class="nav-link" th:href="@{/tickets/new}">Создание заявки</a>
+            <a class="nav-link" th:href="@{/admin/tickets}">Админ-панель</a>
+            <a class="nav-link" th:href="@{/login}">Вход для админов</a>
+        </div>
+    </div>
+</nav>
+
+<main class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-sm border-0 text-center">
+                <div class="card-body p-5">
+                    <div class="mb-4">
+                        <img th:src="@{/images/access-denied.gif}">
+                    </div>
+
+                    <h1 class="display-4 fw-bold text-danger mb-3"> ОШИБКА 403</h1>
+                    <h2 class="h3 mb-3">Доступ запрещён</h2>
+                    <p class="lead mb-4">
+                        У вас нет прав для просмотра администраторской зоны.
+                    </p>
+                    <p class="text-muted mb-4">
+                        Эта страница доступна только для <strong>МОЩНЫХ АДМИНОВ</strong>.
+                    </p>
+                    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                        <a class="btn btn-primary btn-lg" th:href="@{/}">
+                            Вернуться на главную
+                        </a>
+                        <a class="btn btn-outline-secondary btn-lg" th:href="@{/tickets/new}">
+                            Создать заявку
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="footer py-4 border-top mt-5">
+    <div class="container text-center text-muted">
+        Help Desk - учебный проект на Spring Boot
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+</script>
+</body>
+</html>

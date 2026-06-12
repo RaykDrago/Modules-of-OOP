@@ -23,6 +23,7 @@
 <!--            <a class="nav-link" href="/tickets">Заявки</a>-->
             <a class="nav-link active" th:href="@{/tickets/new}">Создание заявки</a>
             <a class="nav-link" th:href="@{/admin/tickets}">Админ-панель</a>
+            <a class="nav-link" th:href="@{/login}">Вход для админов</a>
         </div>
     </div>
 </nav>
@@ -75,7 +76,7 @@
                             <button type="submit" class="btn btn-primary">
                                 Отправить заявку
                             </button>
-                            <a th:href="@{/tickets}" class="btn btn-outline-secondary">
+                            <a th:href="@{/admin/tickets}" class="btn btn-outline-secondary">
                                 Назад к списку
                             </a>
                         </div>
